@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "twayair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "twayair";
+}
+/* 모바일 버전 */
+#container {
+  width: 100%;
+  margin: 0 auto;
+}
+nav {
+  height: 50px;
+  background-color: black;
+}
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 3px;
+}
+nav > ul > li {
+  display: inline-block;
+  margin: 15px 22px;
+}
+a {
+  text-decoration: none;
+}
+/* a태그의 글자 색을 흰색으로 하기 위해 설정 */
+a:link,
+a:visited {
+  color: white;
+}
+a:active,
+a:hover {
+  color: yellow;
+}
+/* 모바일 버전에서 높이 */
+header {
+  width: 100%;
+  height: 300px;
+  background: url(/images/header.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0;
+}
+.photo {
+  display: none;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+#intro,
+#map {
+  height: 10rem;
+}
+
+.page-title > h1 {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+}
+.text {
+  margin-left: 2.5rem;
+  margin-right: 1.5rem;
+}
+
+#container section:nth-child(even) {
+  background-color: gold;
+}
+footer {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+footer > p {
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 테블릿 버전 */
+@media screen and (min-width: 700px) {
+  header {
+    height: 400px;
+  }
+  .flexible {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #intro,
+  #map {
+    width: 50%;
+    height: 200px;
+  }
+  #choice {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  header {
+    height: 450px;
+  }
+  #intro,
+  #map {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .title {
+    width: 100%;
+  }
+  #intro .photo,
+  #map .photo {
+    display: block;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+  }
+  #intro .text {
+    margin-top: 3rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+  }
+  #map .text {
+    margin-top: 4rem;
+    margin-right: 15.5rem;
+    margin-bottom: 5rem;
+  }
+  #choice .photo {
+    display: block;
+    order: 2;
+  }
+  #choice .photo img {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+    margin-right: 5.5rem;
+  }
+  #choice .text {
+    width: 40%;
+    margin-top: 4rem;
+  }
+  .footer {
+    width: 100%;
+  }
+}
